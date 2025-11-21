@@ -173,11 +173,14 @@ class QueryExecutor:
         Returns:
             List of documents
         """
-        # Extract projection if present in query
-        projection = query.pop("projection", None)
+        # Create a copy to avoid mutating the original query
+        query_copy = dict(query)
+
+        # Extract projection if present (use get to avoid mutation)
+        projection = query_copy.pop("projection", None)
 
         # Extract sort if present
-        sort_spec = query.pop("sort", None)
+        sort_spec = query_copy.pop("sort", None)
 
         # Convert sort dict to list of tuples if needed
         sort = None
@@ -189,7 +192,7 @@ class QueryExecutor:
 
         return self.client.find(
             collection=collection,
-            filter_dict=query,
+            filter_dict=query_copy,
             projection=projection,
             limit=limit,
             sort=sort,

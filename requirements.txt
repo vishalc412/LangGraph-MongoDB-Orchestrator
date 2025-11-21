@@ -20,6 +20,11 @@ pydantic==2.9.2
 pydantic-settings==2.5.2
 python-dotenv==1.0.1
 
+# Web API Framework
+fastapi==0.115.0
+uvicorn[standard]==0.31.0
+python-multipart==0.0.9  # For form data
+
 # Utilities
 tenacity==9.0.0  # Retry logic
 rich==13.8.1  # Beautiful terminal output
