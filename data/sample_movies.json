@@ -1,0 +1,227 @@
+[
+  {
+    "title": "The Shawshank Redemption",
+    "year": 1994,
+    "genres": ["Drama"],
+    "runtime": 142,
+    "director": "Frank Darabont",
+    "cast": ["Tim Robbins", "Morgan Freeman"],
+    "plot": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    "imdb": {
+      "rating": 9.3,
+      "votes": 2500000
+    },
+    "countries": ["USA"],
+    "languages": ["English"]
+  },
+  {
+    "title": "The Godfather",
+    "year": 1972,
+    "genres": ["Crime", "Drama"],
+    "runtime": 175,
+    "director": "Francis Ford Coppola",
+    "cast": ["Marlon Brando", "Al Pacino", "James Caan"],
+    "plot": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+    "imdb": {
+      "rating": 9.2,
+      "votes": 1700000
+    },
+    "countries": ["USA"],
+    "languages": ["English", "Italian"]
+  },
+  {
+    "title": "The Dark Knight",
+    "year": 2008,
+    "genres": ["Action", "Crime", "Drama"],
+    "runtime": 152,
+    "director": "Christopher Nolan",
+    "cast": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
+    "plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests.",
+    "imdb": {
+      "rating": 9.0,
+      "votes": 2400000
+    },
+    "countries": ["USA", "UK"],
+    "languages": ["English"]
+  },
+  {
+    "title": "Inception",
+    "year": 2010,
+    "genres": ["Action", "Sci-Fi", "Thriller"],
+    "runtime": 148,
+    "director": "Christopher Nolan",
+    "cast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"],
+    "plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea.",
+    "imdb": {
+      "rating": 8.8,
+      "votes": 2200000
+    },
+    "countries": ["USA", "UK"],
+    "languages": ["English"]
+  },
+  {
+    "title": "Interstellar",
+    "year": 2014,
+    "genres": ["Adventure", "Drama", "Sci-Fi"],
+    "runtime": 169,
+    "director": "Christopher Nolan",
+    "cast": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
+    "plot": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+    "imdb": {
+      "rating": 8.6,
+      "votes": 1600000
+    },
+    "countries": ["USA", "UK"],
+    "languages": ["English"]
+  },
+  {
+    "title": "Parasite",
+    "year": 2019,
+    "genres": ["Drama", "Thriller"],
+    "runtime": 132,
+    "director": "Bong Joon Ho",
+    "cast": ["Song Kang-ho", "Lee Sun-kyun", "Cho Yeo-jeong"],
+    "plot": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+    "imdb": {
+      "rating": 8.6,
+      "votes": 700000
+    },
+    "countries": ["South Korea"],
+    "languages": ["Korean", "English"]
+  },
+  {
+    "title": "Tenet",
+    "year": 2020,
+    "genres": ["Action", "Sci-Fi", "Thriller"],
+    "runtime": 150,
+    "director": "Christopher Nolan",
+    "cast": ["John David Washington", "Robert Pattinson", "Elizabeth Debicki"],
+    "plot": "Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys through a twilight world of international espionage.",
+    "imdb": {
+      "rating": 7.4,
+      "votes": 450000
+    },
+    "countries": ["USA", "UK"],
+    "languages": ["English", "Russian"]
+  },
+  {
+    "title": "Soul",
+    "year": 2020,
+    "genres": ["Animation", "Adventure", "Comedy"],
+    "runtime": 100,
+    "director": "Pete Docter",
+    "cast": ["Jamie Foxx", "Tina Fey", "Graham Norton"],
+    "plot": "A musician who has lost his passion for music is transported out of his body and must find his way back with the help of an infant soul learning about herself.",
+    "imdb": {
+      "rating": 8.1,
+      "votes": 300000
+    },
+    "countries": ["USA"],
+    "languages": ["English"]
+  },
+  {
+    "title": "Dune",
+    "year": 2021,
+    "genres": ["Action", "Adventure", "Drama", "Sci-Fi"],
+    "runtime": 155,
+    "director": "Denis Villeneuve",
+    "cast": ["Timothée Chalamet", "Rebecca Ferguson", "Zendaya"],
+    "plot": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset.",
+    "imdb": {
+      "rating": 8.0,
+      "votes": 550000
+    },
+    "countries": ["USA", "Canada"],
+    "languages": ["English"]
+  },
+  {
+    "title": "Everything Everywhere All at Once",
+    "year": 2022,
+    "genres": ["Action", "Adventure", "Comedy", "Sci-Fi"],
+    "runtime": 139,
+    "director": "Daniel Kwan",
+    "cast": ["Michelle Yeoh", "Stephanie Hsu", "Jamie Lee Curtis"],
+    "plot": "An aging Chinese immigrant is swept up in an insane adventure, where she alone can save the world by exploring other universes.",
+    "imdb": {
+      "rating": 8.1,
+      "votes": 380000
+    },
+    "countries": ["USA"],
+    "languages": ["English", "Mandarin", "Cantonese"]
+  },
+  {
+    "title": "Top Gun: Maverick",
+    "year": 2022,
+    "genres": ["Action", "Drama"],
+    "runtime": 131,
+    "director": "Joseph Kosinski",
+    "cast": ["Tom Cruise", "Jennifer Connelly", "Miles Teller"],
+    "plot": "After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past.",
+    "imdb": {
+      "rating": 8.3,
+      "votes": 520000
+    },
+    "countries": ["USA"],
+    "languages": ["English"]
+  },
+  {
+    "title": "Oppenheimer",
+    "year": 2023,
+    "genres": ["Biography", "Drama", "History"],
+    "runtime": 180,
+    "director": "Christopher Nolan",
+    "cast": ["Cillian Murphy", "Emily Blunt", "Robert Downey Jr."],
+    "plot": "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.",
+    "imdb": {
+      "rating": 8.6,
+      "votes": 600000
+    },
+    "countries": ["USA", "UK"],
+    "languages": ["English"]
+  },
+  {
+    "title": "Barbie",
+    "year": 2023,
+    "genres": ["Adventure", "Comedy", "Fantasy"],
+    "runtime": 114,
+    "director": "Greta Gerwig",
+    "cast": ["Margot Robbie", "Ryan Gosling", "America Ferrera"],
+    "plot": "Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land.",
+    "imdb": {
+      "rating": 7.1,
+      "votes": 440000
+    },
+    "countries": ["USA", "UK"],
+    "languages": ["English"]
+  },
+  {
+    "title": "The Matrix",
+    "year": 1999,
+    "genres": ["Action", "Sci-Fi"],
+    "runtime": 136,
+    "director": "The Wachowskis",
+    "cast": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
+    "plot": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+    "imdb": {
+      "rating": 8.7,
+      "votes": 1800000
+    },
+    "countries": ["USA"],
+    "languages": ["English"]
+  },
+  {
+    "title": "Pulp Fiction",
+    "year": 1994,
+    "genres": ["Crime", "Drama"],
+    "runtime": 154,
+    "director": "Quentin Tarantino",
+    "cast": ["John Travolta", "Uma Thurman", "Samuel L. Jackson"],
+    "plot": "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
+    "imdb": {
+      "rating": 8.9,
+      "votes": 1900000
+    },
+    "countries": ["USA"],
+    "languages": ["English", "Spanish", "French"]
+  }
+]
