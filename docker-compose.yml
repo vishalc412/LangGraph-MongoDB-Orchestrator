@@ -1,0 +1,117 @@
+# ============================================================================
+# MongoDB AI Agent - Docker Compose Configuration
+# ============================================================================
+# Complete local development environment with MongoDB
+#
+# Usage:
+#   docker-compose up -d         # Start all services
+#   docker-compose logs -f       # View logs
+#   docker-compose down          # Stop all services
+#
+# Services:
+#   - mongodb: MongoDB database
+#   - mongodb-agent: AI Agent application (interactive mode)
+#
+# Author: AI Agent Development Team
+# ============================================================================
+
+version: '3.8'
+
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:7.0
+    container_name: mongodb-ai-agent-db
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME:-admin}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD:-password}
+      MONGO_INITDB_DATABASE: ${MONGODB_DATABASE:-sample_mflix}
+    volumes:
+      - mongodb_data:/data/db
+      - mongodb_config:/data/configdb
+      - ./data/sample_movies.json:/docker-entrypoint-initdb.d/sample_movies.json:ro
+    networks:
+      - mongodb-agent-network
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  # MongoDB AI Agent (commented out by default - uncomment to run)
+  # mongodb-agent:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   container_name: mongodb-ai-agent-app
+  #   restart: unless-stopped
+  #   depends_on:
+  #     mongodb:
+  #       condition: service_healthy
+  #   environment:
+  #     # MongoDB connection
+  #     MONGODB_URI: mongodb://${MONGO_USERNAME:-admin}:${MONGO_PASSWORD:-password}@mongodb:27017
+  #     MONGODB_DATABASE: ${MONGODB_DATABASE:-sample_mflix}
+  #     MONGODB_COLLECTION: ${MONGODB_COLLECTION:-movies}
+  #
+  #     # LLM Provider (OpenAI or Ollama)
+  #     DEFAULT_LLM_PROVIDER: ${DEFAULT_LLM_PROVIDER:-openai}
+  #     OPENAI_API_KEY: ${OPENAI_API_KEY}
+  #     OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
+  #
+  #     # Ollama (if using local LLM)
+  #     OLLAMA_HOST: ${OLLAMA_HOST:-http://host.docker.internal:11434}
+  #     OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.1}
+  #
+  #     # Application settings
+  #     ENVIRONMENT: development
+  #     LOG_LEVEL: INFO
+  #     CHECKPOINTER_TYPE: sqlite
+  #     CHECKPOINTER_SQLITE_PATH: /app/data/checkpoints.db
+  #   volumes:
+  #     - agent_data:/app/data
+  #     - agent_logs:/app/logs
+  #   networks:
+  #     - mongodb-agent-network
+  #   stdin_open: true
+  #   tty: true
+  #   command: ["python", "-m", "mongodb_agent.main", "chat"]
+
+  # Ollama (Optional - for local LLM)
+  # Uncomment to run Ollama locally instead of using OpenAI
+  # ollama:
+  #   image: ollama/ollama:latest
+  #   container_name: mongodb-ai-agent-ollama
+  #   restart: unless-stopped
+  #   ports:
+  #     - "11434:11434"
+  #   volumes:
+  #     - ollama_data:/root/.ollama
+  #   networks:
+  #     - mongodb-agent-network
+  #   healthcheck:
+  #     test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+  #     interval: 30s
+  #     timeout: 10s
+  #     retries: 3
+
+volumes:
+  mongodb_data:
+    driver: local
+  mongodb_config:
+    driver: local
+  agent_data:
+    driver: local
+  agent_logs:
+    driver: local
+  ollama_data:
+    driver: local
+
+networks:
+  mongodb-agent-network:
+    driver: bridge
+    name: mongodb-agent-network
